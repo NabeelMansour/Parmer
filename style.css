@@ -1,4 +1,4 @@
-*{
+*, *::after, *::before{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -14,7 +14,7 @@ body{
 /* Global Styles */
 
 .wrapper {
-    width: 90%;
+    width: 85%;
     margin: 0 auto;
     padding: 1rem 0;
 }
@@ -28,7 +28,6 @@ h1,h2,h3,p{
 }
 
 /* Header section */
-
 
 .header{
     background: var(--primary-color);
@@ -48,8 +47,14 @@ img {
     margin-top: 5rem;
 }
 
-nav{
+.nav{
     display: none;
+}
+
+.nav a{
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .header-inner{
@@ -101,4 +106,69 @@ textarea{
 
 .footer-terms{
     max-width: 90%;
+}
+
+/* Media Queries */
+
+@media screen and (min-width:1126px){
+    .wrapper{
+        max-width: 1170px;
+        width: 90%;
+    }
+
+    .fa-bars{
+        display: none;
+    }
+
+    .nav{
+        display: block;
+    }
+
+    .nav ul{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        gap: 1em;
+    }
+
+    .header-title h1{
+        margin: 0;
+    }
+
+    .kontakt-title{
+        max-width: 550px;
+        width: 100%;
+        margin-bottom: 3em;
+    }
+
+    .kontakt-form-section{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .kontakt-map{
+        align-self: center;
+        margin: -22em 0 0 0 0;
+    }
+
+    .form{
+        width: 40%;
+    }
+
+    .footer{
+        min-height: 20vh;
+    }
+
+    .footer-inner{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .footer-adress,
+    .footer-terms{
+        max-width: 200px;
+        width: 100%;
+    }
 }
