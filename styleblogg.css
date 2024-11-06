@@ -3,7 +3,6 @@ body, h1, a {
     padding: 0;
 }
 
-
 header {
     background-color: #3C3C3C;
     color: white;
@@ -13,11 +12,20 @@ header {
     padding: 20px 40px; 
 }
 
+.logo-title {
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+
+.logo {
+    height: 70px; 
+    width: auto;
+}
 
 header h1 {
     font-size: 24px;
 }
-
 
 nav {
     display: flex;
