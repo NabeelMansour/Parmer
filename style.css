@@ -1,69 +1,323 @@
-
-body, h1, a {
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-html, body {
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: #F7EBE8; 
+body {
+    background-color: #F7EBE8;
 }
 
+/*header*/
 
 header {
-    background-color: #3C3C3C;
     color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
-}
-
-
-.logo-title {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.logo {
-    height: 70px;
-    width: auto;
+    background-color: #3c3c3c;
+    font-family: 'roboto', serif;
+    padding: 1rem 0 0.5rem 0;
+    text-align: center;
 }
 
 header h1 {
-    font-size: 24px;
+    font-size: 1.8rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
 }
 
+/*Meny*/
 
-nav {
-    display: flex;
-    gap: 15px;
+span.menu-icon,
+span.menu-icon::before,
+span.menu-icon::after {
+    position: absolute;
+    display: block;
+    border-radius: 3px;
+    height: 5px;
+    width: 35px;
+    background: white;
+    content: '';
 }
 
-nav a {
+span.menu-icon::before {
+    top: 10px;
+}
+
+span.menu-icon::after {
+    top: 20px;
+}
+
+/* Main menu */
+.main-menu {
+    position: fixed;
+    right: -250px;
+    top: 0;
+    height: 100%;
+    overflow: hidden;
+    transition: right 0.5s ease, box-shadow 0.5s ease;
+    z-index: 999;
+}
+
+.main-menu:target {
+    right: 0;
+    outline: none;
+    box-shadow: 3px 0 12px rgba(0, 0, 0, .25);
+}
+
+/* Menu button */
+.menu-toggle {
+    position: absolute;
+    top: 0;
+    right: 35px;
+    width: 35px;
+    height: 35px;
+    padding: 20px;
+}
+
+.main-menu ul {
+    margin: 0;
+    padding: 2.5em 0 0;
+    min-height: 100%;
+    width: 250px;
+    background: #3c3c3c;
+}
+
+.main-menu a {
+    display: block;
+    font-family: 'roboto', serif;
+    padding: 1em;
+    line-height: 1em;
+    font-size: 1.6em;
     color: white;
     text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 4px;
+    transition: letter-spacing 0.3s ease, color 0.3s ease;
 }
 
-nav a:hover {
-    background-color: #555;
+.main-menu a:hover,
+.main-menu a:focus {
+    color: #F7EBE8;
+    letter-spacing: 0.05em;
 }
 
+.main-menu .menu-close {
+    font-family: 'roboto', serif;
+    font-weight: normal;
+    position: absolute;
+    font-size: 3em;
+    padding: 0.4em;
+    right: 0;
+    top: 0;
+    z-index: 10;
+}
+
+/* Startsida */
+
+h2,
+h3,
+h4,
+p,
+a {
+    font-family: 'roboto', serif;
+    color: #3c3c3c;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Sökruta */
+
+.sökruta-desktop {
+    display: none;
+}
+
+.sökruta-backgrund {
+    background-color: #931818;
+    width: 100vw;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sökruta-liten {
+    background-color: white;
+    width: 80vw;
+    height: 40px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+}
+
+.sökruta-liten p {
+    margin: 0 0 0 1rem;
+    color: lightgray;
+}
+
+/* Kommande evenemang */
+
+.kommande-evenemang {
+    margin: 2rem 0 1rem 1rem;
+    width: 90vw;
+    font-family: 'roboto', serif;
+    color: #3c3c3c;
+}
+
+.kommande-evenemang p {
+    margin: 0.2rem 0 0 0;
+    color: #979797;
+    font-weight: 350;
+}
+
+.evenemang {
+    margin: 1rem 0 1rem 1rem;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.evenemang h4 {
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+}
+
+.evenemang p {
+    font-weight: 300;
+}
+
+img {
+    width: 90vw;
+    border-radius: 10px;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.mer-information {
+    font-weight: 300;
+    font-size: 0.75rem;
+    text-decoration: underline;
+    align-self: flex-end;
+}
+
+.visa-fler {
+    background-color: #931818;
+    width: 12rem;
+    height: 3rem;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    margin: 2rem 0 2rem 0;
+    transition-duration: 0.7s;
+}
+
+.visa-fler:hover {
+    background-color: #3c3c3c;
+    letter-spacing: 1px;
+}
 
 footer {
-    background-color: #3C3C3C;
-    color: white;
-    text-align: center;
-    padding: 50px 0;
-    margin-top: auto;  
+    background-color: #3c3c3c;
+    height: 450px;
+    padding: 4rem 0 0 0;
 }
 
+footer h2,
 footer p {
-    margin: 0;
-    font-size: 14px;
+    color: white;
+    margin: 0 0 0 2rem;
 }
+
+footer article {
+    margin: 2rem 0 0 0;
+}
+
+.kontaktuppgifter p {
+    text-decoration: underline;
+    margin-top: 0.3rem;
+}
+
+.om-evenemang p {
+    margin-top: 0.5rem;
+}
+
+
+@media (min-width: 600px) {
+
+    /* Desktop meny */
+
+    main ul {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .menu-toggle,
+    .main-menu .menu-close {
+        display: none;
+    }
+
+    .main-menu {
+        position: relative;
+        top: 10px;
+        right: 10px;
+        height: auto;
+    }
+
+    .main-menu ul {
+        padding-top: 0;
+        height: auto;
+        width: auto;
+        background: none;
+    }
+
+    .main-menu ul li {
+        display: inline-block;
+        margin-left: 10px;
+    }
+
+    .main-menu a {
+        font-size: 1.3em;
+        transition: letter-spacing 0.3s ease;
+    }
+
+    .main-menu a:hover,
+    .main-menu a:focus {
+        letter-spacing: 0.05em;
+    }
+
+    /* Sökruta */
+
+    .sökruta-backgrund {
+        display: none;
+    }
+
+    .sökruta-desktop {
+        background-color: #931818;
+        width: 80vw;
+        height: 200px;
+        margin: 3rem 0 0 0;
+        border-radius: 10px;
+        display: flex;
+    }
+
+    .sökruta-desktop p {
+        color: white;
+    }
+
+    .sökruta {
+        background-color: white;
+        width: 200px;
+        height: 100px;
+        border-radius: 10px;
+    }
+
+    .sökruta p {
+        color: lightgray;
+    }
+
+}
+
+
+
+
+
