@@ -55,7 +55,7 @@ img {
     right: 0;
     bottom: 0;
     background: #f1f5f8;
-    transform: translateX(100%);
+    transform: translateX(-100%);
     transition: var(--transition);
 }
 
@@ -165,10 +165,10 @@ textarea{
         display: none;
     }
 
-    .nav,
     .nav-title
     {
         display: block;
+        margin: 0;
     }
 
     .nav ul{
@@ -179,8 +179,29 @@ textarea{
         gap: 1em;
     }
 
-    .header-title h1{
-        margin: 0;
+    .nav{
+        transform: translateX(0);
+        background: none;
+        position: static;
+    }
+
+    .nav-header{
+        display: none;
+    }
+
+    .nav a{
+        color: #fff;
+        font-size: 1rem;
+        font-size: 1rem;
+        padding: 0;
+        text-transform: capitalize;
+    }
+
+    .nav a:hover{
+        text-decoration: underline;
+        background: none;
+        padding-left: 0;
+        border-left: none;
     }
 
     .kontakt-title{
@@ -190,23 +211,33 @@ textarea{
     }
 
     .kontakt-form-section{
-        display: flex;
+        /* display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: center; */
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(4, 150px);
     }
 
     .kontakt-map{
-        align-self: center;
-        margin: -22em 0 0 0 0;
+        /* align-self: center; */
+        grid-column: 5 / -1;
+        grid-row: 2 / 4;
+        /* margin: -22em 0 0 0 0; */
+    }
+
+    .kontakt-map img{
+        display: block;
+        height: 100%;
     }
 
     .form{
-        width: 40%;
+        /* width: 40%; */
+        grid-column: 1 / 4;
     }
 
     .footer{
         min-height: 20vh;
-        
     }
 
     .footer-inner{
@@ -214,6 +245,7 @@ textarea{
         justify-content: space-between;
         align-items: center;
     }
+
     .footer-adress,
     .footer-terms{
         max-width: 200px;
@@ -221,3 +253,4 @@ textarea{
         line-height: 1.5;
     }
 }
+
