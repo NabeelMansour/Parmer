@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="kontaktstyle.css" />
+    <title>Kontakt</title>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="wrapper">
+        <div class="header-inner">
+          <img src="./assets/Pärmar och Poes 1.png" alt="header logo" />
+          <div class="header-title">
+            <h1 class="nav-title">Pärmer & Poesi</h1>
+          </div>
+          <nav class="nav" id="nav">
+            <div class="nav-header">
+              <span class="nav-close" id="nav-close">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+            <ul>
+              <li><a href="index.html">Hem</a></li>
+              <li><a href="#">Evenemang</a></li>
+              <li><a href="#">Blog</a></li>
+            </ul>
+          </nav>
+          <span class="nav-btn" id="nav-btn">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </div>
+      </div>
+    </header>
+    <!-- End of Header -->
+    <!-- Main -->
+    <main>
+      <section class="kontakt">
+        <div class="wrapper">
+          <h1 class="kontakt-title">
+            Gå med i de tusentals bokentusiater som läser vårt nyhetsbrev. Få de
+            senaste boknyheterna direkt till din e-postinkorg varje vecka
+          </h1>
+          <div class="kontakt-form-section">
+            <form class="form">
+              <!-- Förenamn -->
+              <div class="form-namn">
+                <label for="förenamn">Förenamn</label>
+                <input
+                  type="text"
+                  id="förenamn"
+                  placeholder="Förenamn*"
+                  required
+                />
+              </div>
+              <!-- Efternamn -->
+              <div class="form-efternamn">
+                <label for="efternamn">Efternamn</label>
+                <input
+                  type="text"
+                  id="efternamn"
+                  placeholder="Efternamn*"
+                  required
+                />
+              </div>
+              <!-- Email -->
+              <div class="form-email">
+                <label for="email">Email</label>
+                <input
+                  type="password"
+                  id="email"
+                  placeholder="Email*"
+                  required
+                />
+              </div>
+              <!-- Bok Intresse -->
+              <div class="form-bok-intresse">
+                <label for="intresse">Bok Intresse</label>
+                <textarea
+                  name="intresse"
+                  id="intresse"
+                  placeholder="Skrive här..."
+                  rows="8"
+                ></textarea>
+              </div>
+              <div class="submit-btn">
+                <button type="submit">Prenumera</button>
+              </div>
+            </form>
+            <div class="kontakt-map">
+              <img src="./assets/image.png" alt="kontakt-map" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- End of Main -->
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-inner">
+          <img src="./assets/Pärmar och Poes 1.png" alt="footer-logo" />
+          <p class="footer-adress">
+            kontakt Stockholm Stad 11121 Stockholm kontaktcenter@stockholm.se
+          </p>
+          <p class="footer-terms">
+            Om Evenemangkalendern Riktlinjer för evenemangskalendern
+            Tillgänglighetsredogörelse
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- End of Footer -->
+    <script src="./app.js"></script>
+  </body>
+</html>
