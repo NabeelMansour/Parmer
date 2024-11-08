@@ -1,0 +1,259 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #f7ebe8;
+    width: 100%;
+    height: 100vh;
+    line-height: 1.3;
+}
+
+/* Global Styles */
+
+.wrapper {
+    width: 85%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+:root {
+    --primary-color: #3c3c3c;
+    --transition: all 0.3s linear;
+}
+
+h1,
+h2,
+h3,
+p {
+    margin: 1em 0;
+}
+
+/* Header section */
+
+.header {
+    background: var(--primary-color);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+img {
+    display: block;
+    width: 50px;
+}
+
+.nav-title {
+    display: none;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f1f5f8;
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+
+.showNav {
+    transform: translate(0);
+}
+
+.nav-header {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.nav-close {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #f29c9c;
+    transition: var(--transition);
+}
+
+.nav-close:hover {
+    color: #bb2525;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: #617d98;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    background: #f7ebe8;
+    padding-left: 1.5rem;
+    border-left: 0.25rem solid #bf0000;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-bars {
+    font-size: 50px;
+}
+
+.form input,
+textarea {
+    width: 100%;
+    padding: 1em;
+    margin-top: 0.5em;
+    border-radius: 10px;
+    border: 1px solid;
+}
+
+.form label {
+    margin: 0.4em 0;
+    display: inline-block;
+}
+
+.submit-btn button {
+    margin: 1em 0 1.5em 0;
+    border: none;
+    border-radius: 0.5em;
+    padding: 1em 1.5em;
+    border: 1px solid;
+}
+
+.kontakt-map img {
+    width: 100%;
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: #fff;
+    padding-top: 1em;
+}
+
+.footer-adress {
+    max-width: 50%;
+}
+
+.footer-terms {
+    max-width: 90%;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1126px) {
+    .wrapper {
+        max-width: 1170px;
+        width: 90%;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-title {
+        display: block;
+        margin: 0;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        gap: 1em;
+    }
+
+    .nav {
+        transform: translateX(0);
+        background: none;
+        position: static;
+    }
+
+    .nav-header {
+        display: none;
+    }
+
+    .nav a {
+        color: #fff;
+        font-size: 1rem;
+        font-size: 1rem;
+        padding: 0;
+        text-transform: capitalize;
+    }
+
+    .nav a:hover {
+        text-decoration: underline;
+        background: none;
+        padding-left: 0;
+        border-left: none;
+    }
+
+    .kontakt-title {
+        max-width: 550px;
+        width: 100%;
+        margin-bottom: 3em;
+    }
+
+    .kontakt-form-section {
+        /* display: flex;
+        justify-content: space-between;
+        align-items: center; */
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-template-rows: repeat(4, 150px);
+    }
+
+    .kontakt-map {
+        /* align-self: center; */
+        grid-column: 5 / -1;
+        grid-row: 2 / 4;
+        /* margin: -22em 0 0 0 0; */
+    }
+
+    .kontakt-map img {
+        display: block;
+        height: 100%;
+    }
+
+    .form {
+        /* width: 40%; */
+        grid-column: 1 / 4;
+    }
+
+    .footer {
+        min-height: 20vh;
+    }
+
+    .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-adress,
+    .footer-terms {
+        max-width: 200px;
+        width: 100%;
+        line-height: 1.5;
+    }
+}
