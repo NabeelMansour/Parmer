@@ -3,21 +3,105 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evenemang - Pärmar & Poesi</title>
+    <title>Evenemang - Pärmer & Poesi</title>
     <link rel="stylesheet" href="styleevenemang.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
   </head>
+
   <body>
     <header>
-      <div class="logo">
-        <img src="bilder/logga.png" />
-      </div>
-
-      <nav class="nav-links">
-        <a href="index.html">Hem</a>
-        <a href="blogg.html">Blogg</a>
-        <a href="kontakt.html">Kontakta oss</a>
+      <nav>
+        <input type="checkbox" id="check" />
+        <label for="check" class="checkbtn">
+          <i class="fa fa-bars"></i>
+        </label>
+        <a href="#" class="logo"
+          ><img
+            src="bilder/logga.png"
+            alt="Loggan"
+            style="width: 80px; height: 80px"
+        /></a>
+        <h1 class="title">Pärmar & Poesi</h1>
+        <ul>
+          <li><a href="#">Hem</a></li>
+          <li><a href="#">Blogg</a></li>
+          <li><a href="#">Kontakt</a></li>
+        </ul>
       </nav>
     </header>
-    <h1>TestTest</h1>
+
+    <main>
+      <div class="event-container">
+        <div class="event">
+          <img src="bilder/event1.jpg" alt="event image" style="width: 20%" />
+          <div class="event-details">
+            <h2>tis, 26/11 - Poesi evenemang</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Architecto repellendus quas explicabo quisquam at quam fugit
+              exercitationem aspernatur dolorem. Error, molestias...
+            </p>
+            <button class="read-more" type="button">
+              <a href="#">Läs mer</a>
+            </button>
+          </div>
+        </div>
+        <div class="event">
+          <img src="bilder/event2.jpg" alt="event image" style="width: 20%" />
+          <div class="event-details">
+            <h2>tors, 28/11 - Bokcirkeln</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Architecto repellendus quas explicabo quisquam at quam fugit
+              exercitationem aspernatur dolorem. Error, molestias...
+            </p>
+            <button class="read-more" type="button">
+              <a href="#">Läs mer</a>
+            </button>
+          </div>
+        </div>
+        <div class="event">
+          <img src="bilder/event3.jpg" alt="event image" style="width: 20%" />
+          <div class="event-details">
+            <h2>lör, 30/11 - Bokcirkeln för ungdomar</h2>
+            <p>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Architecto repellendus quas explicabo quisquam at quam fugit
+              exercitationem aspernatur dolorem. Error, molestias...
+            </p>
+            <button class="read-more" type="button">
+              <a href="#">Läs mer</a>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="details">
+        <section class="contact">
+          <h2>Kontakt</h2>
+          <p>Stockholm Stad</p>
+          <p>11121 Stockholm</p>
+          <br />
+          <p>08-508 00 508</p>
+          <p>kontaktcenter@stockholm.se</p>
+        </section>
+        <section class="footer-links">
+          <a href="#">Om Evenemangskalendern</a>
+          <a href="#">Riktlinjker för evenemangskalendern</a>
+          <a href="#">Tillgänglighetsredogörelse</a>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>
