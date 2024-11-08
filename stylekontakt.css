@@ -139,7 +139,7 @@ textarea {
     border: 1px solid;
 }
 
-.kontakt-map img {
+.kontakt-map iframe {
     width: 100%;
 }
 
@@ -215,28 +215,22 @@ textarea {
     }
 
     .kontakt-form-section {
-        /* display: flex;
-        justify-content: space-between;
-        align-items: center; */
         display: grid;
         grid-template-columns: repeat(7, 1fr);
         grid-template-rows: repeat(4, 150px);
     }
 
     .kontakt-map {
-        /* align-self: center; */
         grid-column: 5 / -1;
         grid-row: 2 / 4;
-        /* margin: -22em 0 0 0 0; */
     }
 
-    .kontakt-map img {
+    .kontakt-map iframe {
         display: block;
         height: 100%;
     }
 
     .form {
-        /* width: 40%; */
         grid-column: 1 / 4;
     }
 
