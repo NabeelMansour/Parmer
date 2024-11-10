@@ -1,28 +1,195 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pärmar och Poesi</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <header>
-        <div class="logo-title">
-            <a href="index.html">
-                <img src="bilder/logga.png" alt="Logga" class="logo">
-            </a>
-            <h1>Pärmar och Poesi</h1>
-        </div>
-        <nav>
-            <a href="blogg.html">Blogg</a>
-            <a href="#evenemang">Evenemang</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
-    </header>
 
-    <footer>
-        <p>&copy; 2024 Pärmar och Poesi. All rights reserved.</p>
+<body>
+
+    <!-- Header -->
+
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-inner">
+                <img class="logga" src="./bilder/logga.png" alt="header logo" />
+                <div class="header-title">
+                    <h1 class="nav-title">Pärmer & Poesi</h1>
+                </div>
+                <nav class="nav" id="nav">
+                    <div class="nav-header">
+                        <span class="nav-close" id="nav-close">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </div>
+                    <ul>
+                        <li><a href="evenemang.html">Evenemang</a></li>
+                        <li><a href="blogg.html">Blogg</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <span class="nav-btn" id="nav-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+            </div>
+        </div>
+    </header>
+    <!-- End of Header -->
+
+    <!-- Main -->
+    <main>
+        <section class="telefon" id="sökruta-telefon">
+            <article class="sökruta-liten">
+                <P>Sök evenemang...</P>
+            </article>
+        </section>
+
+        <section class="presentation">
+            <div class="transparent-bakgrund">
+                <h2>Välkommen till Pärmar & Poesi!</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            </div>
+       </section>
+
+        <!-- Sökrutan för desktop försvinner när skärmen blir mindre än 600px -->
+
+        <section class="desktop" id="sökruta-desktop">
+
+            <section id="sök-vänster" class="sökruta-bakgrund">
+
+                <div class="sök-evenemang">
+                    <p>Sök evenemang</p>
+                    <div id="sökruta-nyckelord" class="sökruta">
+                        <p>Sök nyckelord för evenemang här...</p>
+                    </div>
+                </div>
+
+                <div class="sökrutor-små">
+
+                    <div class="sökruta-datum">
+                        <p>Välj datum från</p>
+                        <div class="sökruta">
+                            <p>05/11/2024</p>
+                        </div>
+                    </div>
+
+                    <div class="sökruta-datum">
+                        <p>Välj datum till</p>
+                        <div class="sökruta">
+                            <p>dd/mm/åå</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+            <section id="sök-höger" class="sökruta-bakgrund">
+
+                <div class="switch">
+                    <p>Visa endast gratis evenemang</p>
+                    <div class="sw">
+                        <p>Av</p>
+                        <button class="switch-bakgrund">
+                            <div class="switch-knapp"></div>
+                        </button>
+                        <p>På</p>
+                    </div>
+                </div>
+
+            </section>
+
+        </section>
+
+        <!-- Slut på sökrutan för desktop -->
+
+
+
+        <article class="kommande-evenemang">
+            <h2>Kommande evenemang</h2>
+            <p>Resultat: visar 3 evenemang</p>
+        </article>
+
+        <article class="evenemang">
+            <div>
+                <h3 class="telefon">Författarsamtal</h3>
+                <img class="telefon" src="bilder/old-books-2.jpeg" alt="en hög med gamla böcker">
+                <img class="desktop" src="bilder/old-books-desktop.jpeg" alt="en hög med gamla böcker">
+            </div>
+            <div class="brödtext">
+                <h3 class="desktop">Författarsamtal</h3>
+                <h4>Torsdag 28 november</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="" class="mer-information">Mer information</a>
+            </div>
+        </article>
+
+        <article class="evenemang">
+            <div>
+                <h3 class="telefon">Boksläpp</h3>
+                <img class="telefon" src="bilder/old-books-2.jpeg" alt="en hög med gamla böcker">
+                <img class="desktop" src="bilder/old-books-desktop.jpeg" alt="en hög med gamla böcker">
+            </div>
+            <div class="brödtext">
+                <h3 class="desktop">Boksläpp</h3>
+                <h4>Torsdag 28 november</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="" class="mer-information">Mer information</a>
+            </div>
+        </article>
+
+        <article class="evenemang">
+            <div>
+                <h3 class="telefon">Pysselkväll</h3>
+                <img class="telefon" src="bilder/old-books-2.jpeg" alt="en hög med gamla böcker">
+                <img class="desktop" src="bilder/old-books-desktop.jpeg" alt="en hög med gamla böcker">
+            </div>
+            <div class="brödtext">
+                <h3 class="desktop">Pysselkväll</h3>
+                <h4>Torsdag 28 november</h4>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="" class="mer-information">Mer information</a>
+            </div>
+        </article>
+
+        <button class="visa-fler">Visa fler evenemang</button>
+
+    </main>
+    <!-- End of Main -->
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-inner">
+                <img class="logga" src="./bilder/logga.png" alt="footer-logo" />
+                <p class="footer-adress">
+                    kontakt Stockholm Stad 11121 Stockholm kontaktcenter@stockholm.se
+                </p>
+                <p class="footer-terms">
+                    Om Evenemangkalendern Riktlinjer för evenemangskalendern
+                    Tillgänglighetsredogörelse
+                </p>
+            </div>
+        </div>
     </footer>
+    <!-- End of Header -->
+    <!-- Main -->
+    <script src="./app.js"></script>
 </body>
+
 </html>

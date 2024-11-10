@@ -1,69 +1,507 @@
-
-body, h1, a {
+*,
+*::after,
+*::before {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
-html, body {
-    height: 100%;
+body {
+    background: #f7ebe8;
+    width: 100%;
+    height: 100vh;
+    line-height: 1.3;
+}
+
+/* Global Styles */
+
+.wrapper {
+    width: 85%;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+:root {
+    --primary-color: #3c3c3c;
+    --transition: all 0.3s linear;
+}
+
+h2,
+h3,
+h4,
+p,
+a {
+    font-family: 'roboto', serif;
+    color: #3c3c3c;
+}
+
+/* Header section */
+
+.header {
+    background: var(--primary-color);
+    color: #fff;
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logga {
+    display: block;
+    width: 50px;
+}
+
+.nav-title {
+    display: none;
+}
+
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #f1f5f8;
+    transform: translateX(-100%);
+    transition: var(--transition);
+}
+
+.showNav {
+    transform: translate(0);
+}
+
+.nav-header {
+    text-align: right;
+    padding-right: 1rem;
+}
+
+.nav-close {
+    font-size: 2.5rem;
+    cursor: pointer;
+    color: #f29c9c;
+    transition: var(--transition);
+}
+
+.nav-close:hover {
+    color: #bb2525;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+.nav a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+    font-size: 1.5rem;
+    padding: 0.25rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.25rem;
+    color: #617d98;
+    transition: var(--transition);
+}
+
+.nav a:hover {
+    background: #f7ebe8;
+    padding-left: 1.5rem;
+    border-left: 0.25rem solid #bf0000;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fa-bars {
+    font-size: 50px;
+}
+
+/* Yenns kod */
+
+main {
     display: flex;
     flex-direction: column;
-    background-color: #F7EBE8; 
+    justify-content: center;
+    align-items: center;
 }
 
+.desktop {
+    display: none;
+}
 
-header {
-    background-color: #3C3C3C;
-    color: white;
+/* Sökruta */
+
+/*.sökruta-desktop {
+    display: none;
+ }  */
+
+#sökruta-telefon {
+    background-color: #931818;
+    width: 98.8vw;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sökruta-liten {
+    background-color: white;
+    width: 80vw;
+    height: 40px;
+    border-radius: 7px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px 40px;
 }
 
+.sökruta-liten p {
+    margin: 0 0 0 1rem;
+    color: lightgray;
+}
 
-.logo-title {
+/* Presentation */
+
+.presentation {
+    width: 98.8vw;
+    height: 50vw;
+    background-image: url('bilder/old-books-picjumbo-com.jpeg');
+    background-size: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    justify-content: center;
 }
 
-.logo {
-    height: 70px;
-    width: auto;
-}
-
-header h1 {
-    font-size: 24px;
-}
-
-
-nav {
+.transparent-bakgrund {
+    width: 98.8vw;
+    height: 100vw;
+    background-color: #0000009c;
     display: flex;
-    gap: 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 8px 15px;
-    border-radius: 4px;
-}
-
-nav a:hover {
-    background-color: #555;
-}
-
-
-footer {
-    background-color: #3C3C3C;
+.presentation h2,
+.presentation p {
     color: white;
     text-align: center;
-    padding: 50px 0;
-    margin-top: auto;  
+    padding: 0.5rem;
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px;
+/* Kommande evenemang */
+
+.kommande-evenemang {
+    margin: 2rem 0 1rem 1rem;
+    width: 90vw;
+    font-family: 'roboto', serif;
+    color: #3c3c3c;
+}
+
+.kommande-evenemang p {
+    margin: 0.2rem 0 0 0;
+    color: #979797;
+    font-weight: 350;
+}
+
+/* Evenemang */
+
+.evenemang {
+    margin: 1rem 0 1rem 1rem;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.evenemang h4 {
+    font-weight: 500;
+    margin: 0 0 0.5rem 0;
+}
+
+.evenemang p {
+    font-weight: 300;
+}
+
+main img {
+    width: 90vw;
+    border-radius: 7px 7px 0 0;
+    margin: 0.5rem 0 0 0;
+}
+
+.brödtext {
+    background-color: white;
+    border-radius: 0 0 7px 7px;
+    padding: 1rem;
+}
+
+.brödtext p {
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.mer-information {
+    font-weight: 300;
+    font-size: 0.75rem;
+    text-decoration: underline;
+
+}
+
+/* Visa fler - knapp */
+
+.visa-fler {
+    background-color: #931818;
+    width: 12rem;
+    height: 3rem;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    margin: 2rem 0 2rem 0;
+    transition-duration: 0.7s;
+}
+
+.visa-fler:hover {
+    background-color: #3c3c3c;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+.footer {
+    background: var(--primary-color);
+    color: #fff;
+    padding-top: 1em;
+}
+
+.footer-adress {
+    max-width: 50%;
+}
+
+.footer-terms {
+    max-width: 90%;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1126px) {
+    
+    .telefon {
+        display: none;
+    }
+
+    #sökruta-telefon {
+        display: none;
+    }
+
+    .desktop {
+        display: flex;
+    }
+
+/* Meny */
+
+    .wrapper {
+        max-width: 1170px;
+        width: 90%;
+     }  
+
+    .nav-btn {
+        display: none;
+    }
+
+    .nav-title {
+        display: block;
+        margin: 0;
+    }
+
+    .nav ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        list-style-type: none;
+        gap: 1em;
+    }
+
+    .nav {
+        transform: translateX(0);
+        background: none;
+        position: static;
+    }
+
+    .nav-header {
+        display: none;
+    }
+
+    .nav a {
+        color: #fff;
+        font-size: 1rem;
+        font-size: 1rem;
+        padding: 0;
+        text-transform: capitalize;
+    }
+
+    .nav a:hover {
+        text-decoration: underline;
+        background: none;
+        padding-left: 0;
+        border-left: none;
+    }
+
+    /* Yenns kod */
+
+    .presentation {
+        background-image: url(bilder/old-books-desktop.jpeg);
+        width: 98.8vw;
+        height: 25vw;
+    }
+
+    .presentation h2,
+    .presentation p {
+        width: 45vw;
+        padding: 2rem 0 0 0;
+    }
+
+    .presentation p{
+        font-size: 1.2rem;
+    }
+
+    /* Sökruta */
+
+    .sökruta-bakgrund {
+        background-color: #931818;
+        width: 40vw;
+        height: 200px;
+        margin: 3rem 0 3rem 0;
+    }
+
+    .sökruta-bakgrund p {
+        color: white;
+    }
+
+    #sök-vänster {
+        border-radius: 7px 0 0 7px;
+    }
+
+    #sök-höger {
+        border-radius: 0 7px 7px 0;
+    }
+
+    .sökruta {
+        background-color: white;
+        width: 17vw;
+        height: 40px;
+        border-radius: 10px;
+        margin-top: 0.2rem;
+        display: flex;
+        align-items: center;
+    }
+
+    .sökruta p {
+        color: lightgray;
+        margin-left: 1rem;
+    }
+
+    .sök-evenemang {
+        margin: 1.5rem 1rem;
+    }
+
+    #sökruta-nyckelord {
+        width: 35vw;
+        height: 40px;
+    }
+
+    .sökrutor-små {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .sökruta-datum {
+        margin-left: 1rem;
+    }
+
+    .switch {
+        margin: 2rem 1.5rem;
+    }
+
+    .switch-bakgrund {
+        width: 60px;
+        height: 30px;
+        border-radius: 20px;
+        border: 1px solid black;
+        margin: 0.5rem;
+    }
+
+    .switch-knapp {
+        background-color: #3c3c3c;
+        width: 25px;
+        height: 25px;
+        border-radius: 15px;
+        margin-left: 0.25rem;
+    }
+
+    .sw {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .sw p {
+        font-size: 0.8rem;
+        color: #cfcfcf;
+    }
+
+    /* Evenemang */
+
+    .kommande-evenemang {
+        margin-left: 0;
+        width: 80vw;
+    }
+
+    .evenemang {
+        margin-left: 0;
+        width: 80vw;
+        height: 15vw;
+        flex-direction: row;
+    }
+
+    main img {
+        border-radius: 7px 0 0 7px;
+        width: auto;
+        height: 15vw;
+        margin: 0;
+    }
+
+    .brödtext {
+        border-radius: 0 7px 7px 0;
+        width: auto;
+        height: 15vw;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .brödtext h4 {
+        margin-top: 1rem;
+    }
+
+    .mer-information {
+        margin-top: 1.5rem;
+    }
+
+/* Footer */
+    .footer {
+        min-height: 20vh;
+    }
+
+    .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .footer-adress,
+    .footer-terms {
+        max-width: 200px;
+        width: 100%;
+        line-height: 1.5;
+    }
 }
