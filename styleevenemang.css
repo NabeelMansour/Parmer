@@ -29,10 +29,10 @@ nav {
 .logo {
   display: flex;
   align-items: center;
-  order: 1; /* Default order for logo */
+  order: 1;
 }
 
-/* Center Title */
+/* Title */
 .title {
   color: white;
   font-size: 24px;
@@ -45,14 +45,14 @@ nav {
   order: 2;
 }
 
-/* Navigation Links */
+/* Links */
 nav ul {
   display: flex;
   align-items: center;
   margin: 0;
   padding: 0;
   list-style-type: none;
-  order: 3; /* Default order for navigation links */
+  order: 3;
 }
 
 nav ul li {
@@ -65,22 +65,23 @@ nav ul li a {
   text-decoration: none;
 }
 
-/* Menu Button (for mobile view) */
+/* Menu Button */
 .checkbtn {
   font-size: 30px;
   color: white;
   cursor: pointer;
-  display: none; /* Hidden on desktop */
-  order: 4; /* Default order for checkbtn */
+  display: none;
+  order: 4;
 }
 
 /* Checkbox */
 #check {
   display: none;
 }
+
 .event-container {
   display: flex;
-  width: 100%;
+  width: 60%;
   align-items: center;
   flex-direction: column;
   background-origin: border-box;
@@ -91,13 +92,22 @@ nav ul li a {
 }
 
 .event {
+  background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 100%;
+  border-radius: 10px;
 }
 
 .event-details {
   padding: 2px 16px;
+}
+
+.event-image {
+  padding: 20px;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
 }
 
 .read-more {
@@ -126,13 +136,15 @@ footer {
   right: 0;
 }
 
-.details {
+.footer-details {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap; /* Enable wrapping for responsive layout */
 }
 
-.contact .footer-links {
+.contact,
+.footer-links {
   max-width: 200px;
   width: 100%;
   line-height: 1.5;
@@ -150,15 +162,15 @@ footer {
   /* Show the menu button and hide the title on smaller screens */
   .checkbtn {
     display: block;
-    order: 3; /* Set checkbtn to appear last */
+    order: 3;
   }
 
   .logo {
-    order: 1; /* Logo appears first in mobile view */
+    order: 1;
   }
 
   .title {
-    display: none; /* Hide title to save space on mobile */
+    display: none;
   }
 
   /* Style for navigation links in mobile view */
@@ -175,13 +187,28 @@ footer {
     transition: left 0.3s;
   }
 
-  /* When menu checkbox is checked, display the navigation links */
   #check:checked ~ ul {
     left: 0;
   }
 
-  /* Adjust spacing for each menu item */
   nav ul li {
     margin: 20px 0;
+  }
+
+  .footer-details {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1em;
+  }
+
+  .contact,
+  .footer-links {
+    max-width: 100%;
+    /width: 100%;
+    margin-bottom: 1em;
+  }
+
+  .footer-links a {
+    margin: 10px 0;
   }
 }
