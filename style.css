@@ -119,13 +119,14 @@ nav li {
     font-size: 50px;
 }
 
-/* Yenns kod */
+/* Main */
 
 main {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 100vw;
 }
 
 .desktop {
@@ -134,13 +135,9 @@ main {
 
 /* Sökruta */
 
-/*.sökruta-desktop {
-    display: none;
- }  */
-
 #sökruta-telefon {
     background-color: #931818;
-    width: 98.8vw;
+    width: 100vw;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -164,7 +161,7 @@ main {
 /* Presentation */
 
 .presentation {
-    width: 98.8vw;
+    width: 100vw;
     height: 50vw;
     background-image: url('bilder/old-books-picjumbo-com.jpeg');
     background-size: 100%;
@@ -175,7 +172,7 @@ main {
 }
 
 .transparent-bakgrund {
-    width: 98.8vw;
+    width: 100vw;
     height: 100vw;
     background-color: #0000009c;
     display: flex;
@@ -269,8 +266,12 @@ main img {
 /* Footer */
 .footer {
     background: var(--primary-color);
-    color: #fff;
     padding-top: 1em;
+}
+
+.footer p {
+    color: #fff;
+    margin-top: 1rem;
 }
 
 .footer-adress {
@@ -279,6 +280,7 @@ main img {
 
 .footer-terms {
     max-width: 90%;
+    margin-top: 1rem;
 }
 
 /* Media Queries */
