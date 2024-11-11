@@ -1,28 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pärmar och Poesi</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="styleblogg.css">
 </head>
+
 <body>
-    <header>
-        <div class="logo-title">
-            <a href="index.html">
-                <img src="bilder/logga.png" alt="Logga" class="logo">
-            </a>
-            <h1>Pärmar och Poesi</h1>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="wrapper">
+            <div class="header-inner">
+                <a href="index.html">
+                    <img class="logga" src="./bilder/logga.png" alt="header logo" />
+                </a>
+                <div class="header-title">
+                    <h1 class="nav-title">Pärmar & Poesi</h1>
+                </div>
+                <nav class="nav" id="nav">
+                    <div class="nav-header">
+                        <span class="nav-close" id="nav-close">
+                            <i class="fas fa-times"></i>
+                        </span>
+                    </div>
+                    <ul>
+                        <li><a href="evenemang.html">Evenemang</a></li>
+                        <li><a href="blogg.html">Blogg</a></li>
+                        <li><a href="kontakt.html">Kontakt</a></li>
+                    </ul>
+                </nav>
+                <span class="nav-btn" id="nav-btn">
+                    <i class="fa-solid fa-bars"></i>
+                </span>
+            </div>
         </div>
-        <nav>
-            <a href="blogg.html">Blogg</a>
-            <a href="#evenemang">Evenemang</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
     </header>
-    
-    <div class="cards-container">
+    <!-- End of Header -->
+
+     <!-- Cards Section -->
+     <div class="cards-container">
+        <!-- Card 1 -->
         <div class="card">
             <img src="bilder/bok1.jpg" alt="Bok 1" class="card-image">
             <h2>Fördelar och Nackdelar med Fysiska Böcker vs. E-böcker</h2>
@@ -30,37 +53,39 @@
             <p>Å andra sidan är e-böcker otroligt praktiska. En e-läsare kan rymma tusentals böcker och är enkel att ta med sig på resor, vilket är perfekt för den som vill ha alla sina favoritböcker till hands. Det är också oftast billigare att köpa e-böcker, och de sparar plats hemma.</p>
             <p>Sammanfattningsvis har båda sina fördelar beroende på vad man värderar mest – känslan och traditionen, eller flexibiliteten och enkelheten.</p>
         </div>
+        
+        <!-- Card 2 -->
         <div class="card">
-            <img src="bilder/bok2.jpg" alt="Bok 1" class="card-image">
+            <img src="bilder/bok2.jpg" alt="Bok 2" class="card-image">
             <h2>Fantasyböcker: En Värld Av Oändliga Möjligheter</h2>
             <p>Fantasyböcker har en unik förmåga att ta oss till andra världar, fylla oss med magi och äventyr, och ge oss chansen att utforska det som ligger bortom verklighetens gränser. Genom fantasyns prismatiska lins kan vi drömma om drakar, magiker, mystiska riken och hjältemodiga resor som spränger gränserna för det möjliga.</p>
-                <p>Det som verkligen gör fantasyböcker speciella är deras förmåga att skapa komplexa och levande världar. Författare som J.R.R. Tolkien, George R.R. Martin och J.K. Rowling har byggt episka universum där magi inte bara är en funktion av berättelsen, utan ett livsviktigt element som påverkar varje aspekt av karaktärernas liv.</p> 
-                <p>Dessa världar är inte bara fantasifulla; de är fulla av historia, politik och kultur – så verkliga att man nästan kan känna lukten av skogarna eller höra suset av drakvingar i luften.</p>
-                <p>Men fantasy handlar inte bara om det övernaturliga. I många böcker är kampen mellan gott och ont en grundläggande tematik. Men det handlar också om självupptäckt och att kämpa för rättvisa. Karaktärerna är ofta förlorade eller osäkra till en början, men genom äventyren, prövningarna och mötena med oväntade varelser, lär de sig vad det innebär att vara en hjälte.</p>
-                <p>Och kanske är det just denna känsla av magi som är det mest lockande med fantasygenren. I en tid när vardagen kan kännas tung eller förutsägbar, erbjuder fantasy oss en chans att drömma oss bort till en plats där allt är möjligt, och där vi kan vara en del av de största äventyren.</p>
-                <p>Så nästa gång du känner att du vill fly vardagen, ta en bok i handen och låt dig svepas med till en annan värld. Vem vet? Kanske kommer du att hitta din egen inre hjälte på vägen.</p>
         </div>
+        
+        <!-- Card 3 -->
         <div class="card">
-            <img src="bilder/bok3.jpg" alt="Bok 1" class="card-image">
+            <img src="bilder/bok3.jpg" alt="Bok 3" class="card-image">
             <h2>Barnböcker: Nyckeln till Fantasi och Lärande</h2>
-<p>Att läsa för sina barn är inte bara ett sätt att underhålla dem – det är också en möjlighet att bygga starka band, utveckla deras språkförmåga och ge dem en kärlek för böcker och lärande som kan hålla hela livet. Barnböcker, med sina färgglada bilder och engagerande berättelser, spelar en avgörande roll i att forma barns fantasi och kreativitet.</p>
-<p><strong>Vikten av att läsa för barn</strong></p>
-
-<p>Forskning visar att barn som blir lästa för från en tidig ålder utvecklar en starkare ordförråd, bättre koncentration och en större förståelse för världen omkring dem. När barn hör ord och meningar om och om igen, hjälper det deras hjärnor att koppla samman ljud med bilder och betydelser. Detta är grunden för både läs- och skrivförmåga, och gör att barnen snabbt förstår hur språket fungerar.</p>
-
-<p>Men läsning handlar inte bara om att lära sig ord och bokstäver. Det är också ett sätt att utforska känslor, lösa problem och förstå olika perspektiv. Genom barnböcker får de ta del av världar där de kan vara hjältar, möta utmaningar och känna empati för andra karaktärer. Böcker ger barn möjlighet att reflektera över sina egna liv och de erfarenheter de har.</p>
-
-<p><strong>Barnböcker för alla åldrar</strong></p>
-
-<p>Från de första pekböckerna med stora bilder och korta ord till längre kapitelböcker för äldre barn, finns det en bok för varje utvecklingsstadium. De allra yngsta barnen lär sig om världen genom böcker med färgglada bilder, ljud och enkla historier. När barnen blir äldre kan de börja läsa om äventyr, magiska världar och historier om modiga hjältar och viktiga livsläxor.</p>
-
-<p>Att läsa högt för sina barn – även när de kan läsa själva – erbjuder också en chans för föräldrar och barn att dela en gemensam upplevelse. Det skapar en tid för närhet och samtal, där barnet kan ställa frågor, dela sina tankar och känna sig trygg i att deras tankar är viktiga.</p>
-
+            <p>Att läsa för sina barn är inte bara ett sätt att underhålla dem – det är också en möjlighet att bygga starka band, utveckla deras språkförmåga och ge dem en kärlek för böcker och lärande som kan hålla hela livet.</p>
         </div>
     </div>
 
-    <footer>
-        <p>&copy; 2024 Pärmar och Poesi. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer-inner">
+                <img class="logga" src="./bilder/logga.png" alt="footer-logo" />
+                <p class="footer-adress">
+                    kontakt Stockholm Stad 11121 Stockholm kontaktcenter@stockholm.se
+                </p>
+                <p class="footer-terms">
+                    Om Evenemangkalendern Riktlinjer för evenemangskalendern
+                    Tillgänglighetsredogörelse
+                </p>
+            </div>
+        </div>
     </footer>
+    
+    <script src="./app.js"></script>
 </body>
+
 </html>
