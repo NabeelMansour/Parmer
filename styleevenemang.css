@@ -12,91 +12,119 @@ body {
   background-color: #f7ebe8;
 }
 
-/* Navbar Container */
-nav {
-  background-color: #3c3c3c;
-  height: 80px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 20px;
-  box-sizing: border-box;
-  position: relative;
+.wrapper {
+  width: 85%;
+  margin: 0 auto;
+  padding: 1rem 0;
 }
 
-/* Logo */
-.logo {
-  display: flex;
-  align-items: center;
-  order: 1;
+/* Header section */
+
+.header {
+  background: #3c3c3c;
+  color: #fff;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-/* Title */
-.title {
-  color: white;
-  font-size: 24px;
-  font-weight: bold;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  line-height: 80px;
-  white-space: nowrap;
-  order: 2;
+img {
+  display: block;
+  width: 50px;
 }
 
-/* Links */
-nav ul {
-  display: flex;
-  align-items: center;
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-  order: 3;
+.nav-title {
+  display: none;
 }
 
-nav ul li {
-  margin: 0 10px;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #f1f5f8;
+  transform: translateX(-100%);
+  transition: var(--transition);
 }
 
-nav ul li a {
-  color: white;
-  font-size: 17px;
-  text-decoration: none;
+.showNav {
+  transform: translate(0);
 }
 
-/* Menu Button */
-.checkbtn {
-  font-size: 30px;
-  color: white;
+.nav-header {
+  text-align: right;
+  padding-right: 1rem;
+}
+
+.nav-close {
+  font-size: 2.5rem;
   cursor: pointer;
-  display: none;
-  order: 4;
+  color: #f29c9c;
+  transition: var(--transition);
 }
 
-/* Checkbox */
-#check {
-  display: none;
+.nav-close:hover {
+  color: #bb2525;
 }
 
+nav li {
+  list-style-type: none;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  display: block;
+  font-size: 1.5rem;
+  padding: 0.25rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  color: #617d98;
+  transition: var(--transition);
+}
+
+.nav a:hover {
+  background: #f7ebe8;
+  padding-left: 1.5rem;
+  border-left: 0.25rem solid #bf0000;
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fa-bars {
+  font-size: 50px;
+}
+
+/* Event cards */
 .event-container {
   display: flex;
-  width: 60%;
   align-items: center;
+  justify-content: center;
   flex-direction: column;
-  background-origin: border-box;
-  justify-content: space-between;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   padding: 30px 90px;
   gap: 30px;
-  flex-grow: 1;
 }
 
 .event {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the image horizontally */
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 100%;
   border-radius: 10px;
+  padding: 16px; /* Adds padding around the content */
 }
 
 .event-details {
@@ -104,9 +132,10 @@ nav ul li a {
 }
 
 .event-image {
-  padding: 20px;
-  width: auto;
-  height: auto;
+  display: block;
+  margin: 0 auto; /* Centers image horizontally if there's no flex applied */
+  width: 100%; /* Adjust as needed */
+  max-width: 200px; /* Set a max-width to prevent large images */
   border-radius: 10px;
 }
 
@@ -127,88 +156,105 @@ nav ul li a {
   color: white;
 }
 
-footer {
-  background-color: #3c3c3c;
-  color: white;
-  padding-top: 2em;
-  bottom: 0;
-  left: 0;
-  right: 0;
+#more {
+  display: none;
 }
 
-.footer-details {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap; /* Enable wrapping for responsive layout */
+/* Footer */
+.footer {
+  background: #3c3c3c;
+  color: #fff;
+  padding-top: 1em;
 }
 
-.contact,
-.footer-links {
-  max-width: 200px;
-  width: 100%;
-  line-height: 1.5;
+.footer-adress {
+  max-width: 50%;
 }
 
-.footer-links a {
+.footer-terms .footer-terms:visited {
+  max-width: 90%;
   color: white;
   text-decoration: none;
-  display: block;
-  margin: 50px 0;
 }
 
-/* Responsive Styles for Smaller Screens */
-@media (max-width: 768px) {
-  /* Show the menu button and hide the title on smaller screens */
-  .checkbtn {
-    display: block;
-    order: 3;
+.footer-terms a {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-terms a:visited {
+  color: white;
+}
+
+/* Media Queries */
+
+@media screen and (min-width: 1126px) {
+  .wrapper {
+    max-width: 1170px;
+    width: 90%;
   }
 
-  .logo {
-    order: 1;
-  }
-
-  .title {
+  .nav-btn {
     display: none;
   }
 
-  /* Style for navigation links in mobile view */
-  nav ul {
-    position: fixed;
-    width: 100%;
-    height: 100vh;
-    background: #3c3c3c;
-    top: 80px;
-    left: -100%;
-    flex-direction: column;
+  .nav-title {
+    display: block;
+    margin: 0;
+  }
+
+  .nav ul {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    transition: left 0.3s;
+    list-style-type: none;
+    gap: 1em;
   }
 
-  #check:checked ~ ul {
-    left: 0;
+  .nav {
+    transform: translateX(0);
+    background: none;
+    position: static;
   }
 
-  nav ul li {
-    margin: 20px 0;
+  .nav-header {
+    display: none;
   }
 
-  .footer-details {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1em;
+  .nav a {
+    color: #fff;
+    font-size: 1rem;
+    font-size: 1rem;
+    padding: 0;
+    text-transform: capitalize;
   }
 
-  .contact,
-  .footer-links {
-    max-width: 100%;
-    /width: 100%;
-    margin-bottom: 1em;
+  .nav a:hover {
+    text-decoration: underline;
+    background: none;
+    padding-left: 0;
+    border-left: none;
   }
 
-  .footer-links a {
-    margin: 10px 0;
+  .event-image {
+    max-width: 600px;
+    height: auto;
+  }
+
+  .footer {
+    min-height: 20vh;
+  }
+
+  .footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-adress,
+  .footer-terms {
+    max-width: 200px;
+    width: 100%;
+    line-height: 1.5;
   }
 }

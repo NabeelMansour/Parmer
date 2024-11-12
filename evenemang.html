@@ -13,60 +13,75 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
 
   <body>
-    <header>
-      <nav>
-        <input type="checkbox" id="check" />
-        <label for="check" class="checkbtn">
-          <i class="fa fa-bars"></i>
-        </label>
-        <a href="index.html" class="logo"
-          ><img
-            src="bilder/logga.png"
-            alt="Loggan"
-            style="width: 80px; height: 80px"
-        /></a>
-        <h1 class="title">Pärmar & Poesi</h1>
-        <ul>
-          <li><a href="index.html">Hem</a></li>
-          <li><a href="blogg.html">Blogg</a></li>
-          <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-      </nav>
+    <!-- Header -->
+    <header class="header">
+      <div class="wrapper">
+        <div class="header-inner">
+          <a href="index.html">
+            <img src="./bilder/logga.png" alt="header logo" />
+          </a>
+          <div class="header-title">
+            <h1 class="nav-title">Pärmer & Poesi</h1>
+          </div>
+          <nav class="nav" id="nav">
+            <div class="nav-header">
+              <span class="nav-close" id="nav-close">
+                <i class="fas fa-times"></i>
+              </span>
+            </div>
+            <ul>
+              <li><a href="index.html">Hem</a></li>
+              <li><a href="blogg.html">Blogg</a></li>
+              <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+          </nav>
+          <span class="nav-btn" id="nav-btn">
+            <i class="fa-solid fa-bars"></i>
+          </span>
+        </div>
+      </div>
     </header>
+    <!-- End of Header -->
 
     <main>
       <div class="event-container">
         <div class="event">
-          <img
-            src="bilder/event1.jpg"
-            class="event-image"
-            alt="event image"
-            style="width: 20%"
-          />
+          <img src="bilder/event1.jpg" class="event-image" alt="event image" />
           <div class="event-details">
             <h2>tis, 26/11 - Poesi evenemang</h2>
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-              Architecto repellendus quas explicabo quisquam at quam fugit
-              exercitationem aspernatur dolorem. Error, molestias...
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus
+              imperdiet, nulla et dictum interdum, nisi lorem egestas vitae
+              scel<span id="dots">...</span
+              ><span id="more"
+                >erisque enim ligula venenatis dolor. Maecenas nisl est,
+                ultrices nec congue eget, auctor vitae massa. Fusce luctus
+                vestibulum augue ut aliquet. Nunc sagittis dictum nisi, sed
+                ullamcorper ipsum dignissim ac. In at libero sed nunc venenatis
+                imperdiet sed ornare turpis. Donec vitae dui eget tellus gravida
+                venenatis. Integer fringilla congue eros non fermentum. Sed
+                dapibus pulvinar nibh tempor porta.</span
+              >
             </p>
-            <button class="read-more" type="button">
+            <button class="read-more" onclick="myFunction()" id="myBtn">
               <a href="#">Läs mer</a>
             </button>
           </div>
         </div>
         <div class="event">
-          <img
-            src="bilder/event2.jpg"
-            class="event-image"
-            alt="event image"
-            style="width: 20%"
-          />
+          <img src="bilder/event2.jpg" class="event-image" alt="event image" />
           <div class="event-details">
             <h2>tors, 28/11 - Bokcirkeln</h2>
             <p>
@@ -80,12 +95,7 @@
           </div>
         </div>
         <div class="event">
-          <img
-            src="bilder/event3.jpg"
-            class="event-image"
-            alt="event image"
-            style="width: 20%"
-          />
+          <img src="bilder/event3.jpg" class="event-image" alt="event image" />
           <div class="event-details">
             <h2>lör, 30/11 - Bokcirkeln för ungdomar</h2>
             <p>
@@ -101,22 +111,27 @@
       </div>
     </main>
 
-    <footer>
-      <div class="footer-details">
-        <section class="contact">
-          <h2>Kontakt</h2>
-          <p>Stockholm Stad</p>
-          <p>11121 Stockholm</p>
-          <br />
-          <p>08-508 00 508</p>
-          <p>kontaktcenter@stockholm.se</p>
-        </section>
-        <section class="footer-links">
-          <a href="#">Om Evenemangskalendern</a>
-          <a href="#">Riktlinjker för evenemangskalendern</a>
-          <a href="#">Tillgänglighetsredogörelse</a>
-        </section>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="wrapper">
+        <div class="footer-inner">
+          <img src="./bilder/logga.png" alt="footer-logo" />
+          <p class="footer-adress">
+            Kontakt <br />
+            Stockholm Stad <br />11121 Stockholm
+            <br />kontaktcenter@stockholm.se
+          </p>
+          <section class="footer-terms">
+            <a href="#">Om Evenemangskalendern</a>
+            <a href="#">Riktlinjker för evenemangskalendern</a>
+            <a href="#">Tillgänglighetsredogörelse</a>
+          </section>
+        </div>
       </div>
     </footer>
+    <!-- End of Footer -->
+
+    <script src="./app.js"></script>
+    <script src="./readmore.js"></script>
   </body>
 </html>
