@@ -46,7 +46,7 @@ img {
   bottom: 0;
   background: #f1f5f8;
   transform: translateX(-100%);
-  transition: var(--transition);
+  transition: all 0.3s linear;
 }
 
 .showNav {
@@ -62,7 +62,7 @@ img {
   font-size: 2.5rem;
   cursor: pointer;
   color: #f29c9c;
-  transition: var(--transition);
+  transition: all 0.3s linear;
 }
 
 .nav-close:hover {
@@ -83,7 +83,7 @@ nav li {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   color: #617d98;
-  transition: var(--transition);
+  transition: all 0.3s linear;
 }
 
 .nav a:hover {
@@ -102,6 +102,12 @@ nav li {
   font-size: 50px;
 }
 
+/* Page title */
+.page-title {
+  text-align: center;
+  padding-top: 20px;
+}
+
 /* Event cards */
 .event-container {
   display: flex;
@@ -118,13 +124,13 @@ nav li {
 .event {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centers the image horizontally */
+  align-items: center;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: 0.3s;
   width: 100%;
   border-radius: 10px;
-  padding: 16px; /* Adds padding around the content */
+  padding: 16px;
 }
 
 .event-details {
@@ -133,9 +139,9 @@ nav li {
 
 .event-image {
   display: block;
-  margin: 0 auto; /* Centers image horizontally if there's no flex applied */
-  width: 100%; /* Adjust as needed */
-  max-width: 200px; /* Set a max-width to prevent large images */
+  margin: 0 auto;
+  width: 100%;
+  max-width: 400px;
   border-radius: 10px;
 }
 
