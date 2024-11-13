@@ -251,7 +251,7 @@ main img {
 
 /* Visa fler - knapp */
 
-.visa-fler {
+/*.visa-fler {
     background-color: #931818;
     width: 12rem;
     height: 3rem;
@@ -259,11 +259,22 @@ main img {
     border-radius: 7px;
     margin: 2rem 0 2rem 0;
     transition-duration: 0.7s;
-}
+    display: inline-block;
+ }  */
 
-.visa-fler a {
+.alla-evenemang {
+    background-color: #931818;
+    width: 12rem;
+    height: 3rem;
+    border: none;
+    border-radius: 7px;
+    margin: 2rem 0 2rem 0;
+    transition-duration: 0.7s;
     color: white;
     text-decoration: none;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
 }
 
 /* Footer */
