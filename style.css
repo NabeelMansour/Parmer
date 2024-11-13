@@ -255,11 +255,15 @@ main img {
     background-color: #931818;
     width: 12rem;
     height: 3rem;
-    color: white;
     border: none;
     border-radius: 7px;
     margin: 2rem 0 2rem 0;
     transition-duration: 0.7s;
+}
+
+.visa-fler a {
+    color: white;
+    text-decoration: none;
 }
 
 /* Footer */
@@ -426,9 +430,11 @@ main img {
     .switch-bakgrund {
         width: 60px;
         height: 30px;
+        background-color: white;
         border-radius: 20px;
         border: 1px solid black;
         margin: 0.5rem;
+        padding: 0.1rem;
     }
 
     .switch-knapp {
@@ -436,7 +442,7 @@ main img {
         width: 25px;
         height: 25px;
         border-radius: 15px;
-        margin-left: 0.25rem;
+        margin-left: 0.15rem;
     }
 
     .sw {
