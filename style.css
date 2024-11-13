@@ -26,6 +26,10 @@ body {
     --transition: all 0.3s linear;
 }
 
+h1 {
+    font-family: "roboto", serif;
+}
+
 h2,
 h3,
 h4,
@@ -352,7 +356,7 @@ main img {
 
     .presentation {
         background-image: url(bilder/old-books-desktop.jpeg);
-        width: 98.8vw;
+        width: 100vw;
         height: 25vw;
     }
 
@@ -469,6 +473,7 @@ main img {
         border-radius: 7px 0 0 7px;
         width: auto;
         height: 15vw;
+        width: 23vw;
         margin: 0;
     }
 
