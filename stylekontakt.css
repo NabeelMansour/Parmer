@@ -207,15 +207,16 @@ textarea:focus
         color: #fff;
         font-size: 1rem;
         font-size: 1rem;
-        padding: 0;
+        padding: 0 0 .2rem 0;
         text-transform: capitalize;
     }
 
     .nav a:hover {
-        text-decoration: underline;
+        /* text-decoration: underline; */
         background: none;
         padding-left: 0;
         border-left: none;
+        border-bottom: 2px solid #931818;
     }
 
     .kontakt-title {
