@@ -231,7 +231,7 @@ nav li {
     color: #fff;
     font-size: 1rem;
     font-size: 1rem;
-    padding: 0;
+    padding: 0 0 0.2rem 0;
     text-transform: capitalize;
   }
 
@@ -240,6 +240,7 @@ nav li {
     background: none;
     padding-left: 0;
     border-left: none;
+    border-bottom: 2px solid #931818;
   }
 
   .event-image {
