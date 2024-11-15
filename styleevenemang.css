@@ -151,6 +151,7 @@ nav li {
   color: white;
   padding: 15px 25px;
   margin: 5px;
+  cursor: pointer;
   text-align: center;
   text-decoration: none;
   display: inline-block;
